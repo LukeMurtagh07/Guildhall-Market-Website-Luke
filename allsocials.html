@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Socials </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="overflow: hidden;">
+    <div class="topnav">
+<a href="logofullscreen.html"><img src="assets/Logo.png" style="width: 130px;"></a> 
+    <div class="lefta">       
+<a href="index.html">Home</a>
+<a href="vendors.html">Vendors</a>
+<a href="media.html">Animation/Application</a>
+<a href="about.html">About Us</a>
+<a href="contactus.html">Contact Us</a>
+<a class="active" href="allsocials.html">Socials</a>
+   </div> 
+</div>
+    <!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE --><div class="socials" style="text-align: center;">
+    <h1 >All Socials</h1>
+    <h2>Cardigan Guildhall Socials</h2>
+    <a href="https://www.facebook.com/CardiganGuildhallMarket/">Market Facebook</a>
+<br>
+    <a href="https://x.com/GuildhallM">Market Twitter</a>
+<br>
+    <a href="https://www.tripadvisor.co.uk/Attraction_Review-g316011-d15685342-Reviews-Cardigan_Guildhall_Market-Cardigan_Ceredigion_Wales.html">Tripadvisor</a>
+<br>
+    <h2>Vendors Facebook Accounts</h2>
+    <a href="https://www.facebook.com/groups/1301291670543597/">Amaze Me 3D</a>
+<br>
+    <a href="https://www.facebook.com/adaliza.brace/">Cartref</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=100088574941482">Dahlia Dwt</a>
+<br>
+    <a href="https://www.facebook.com/daizychaindesignz">Daizy Chain Designz</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=61562312445325">Gwraig Grefft</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=61562729732643">Hair Studio</a>
+<br>
+    <a href="https://www.facebook.com/Homeappliancerepairscardigan">Home Appliance Repairs</a>
+<br>
+    <a href="https://www.facebook.com/underthelaurel">Under The Laurel</a>
+<br>
+    <a href="https://www.facebook.com/LeafyLionCreativeDen">Leafy Lion</a>
+<br>
+    <a href="https://www.facebook.com/Lostintimecardigan">Lost In Time</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=61558168376687">Mister Meze</a>
+<br>
+    <a href="https://www.facebook.com/sharonshandcraftedtreasures">Sharons Handcrafted Treasures</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=100063743086751">The Spinning Wheel</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=61583563014564">Tatws O'r Galon</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=100066643359706">Teifi Traction</a>
+<br>
+    <a href="https://www.facebook.com/TimeWarpCardigan">TimeWarp</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=100058030040807">Toby Stitches</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=100063724503434">Totem</a>
+<br>
+    <a href="https://www.facebook.com/hashtagwales25">Hashtag Perfumes</a>
+<br>
+    <a href="https://www.facebook.com/profile.php?id=61563054999710">Mynydd Bach Creations</a>
+</div>
+
+    <div class="map-text">
+        <a href="sitemap.html">Site Map</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="contactus.html">Contact Details and Socials</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="about.html">About Us</a>
+    </div>
+   <script src="script.js"></script> 
+   
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+<a href="logofullscreen.html"><img src="assets/Logo.png" style="width: 130px;"></a> 
+    <div class="lefta">       
+<a href="index.html">Home</a>
+<a href="vendors.html">Vendors</a>
+<a href="media.html">Animation/Application</a>
+<a class="active" href="about.html">About Us</a>
+<a href="contactus.html">Contact Us</a>
+<a href="allsocials.html">Socials</a>
+   </div> 
+</div>
+    <!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE -->
+     <div class="VertNavAbout">
+<a class="active" href="about.html"> About Us</a>
+<a href="history.html">History</a>
+<a href="assets/Stall-Enquiry-form-Cardigan-Guildhall-Market.pdf" download>Download Vendor Opening PDF</a>
+</div>
+
+<div class="aboutuscontent">
+  <h1>About Us</h1>
+<p>Cardigan market first opened its doors in 1860. It was the first civic building in Britain in the “modern Gothic” <br>style advocated by John Ruskin, and includes some Arabic influences (as can be seen in the arch decorations). <br>Over the years the market has gone from strength to strength whilst managed by Ceredigion County Council.
+</p>
+<img src="assets/Cardigan-Guildhall-Market-exterior-650x366.jpg">
+<p>It has been managed since July 2014 by Menter Aberteifi, a not for profit organisation, based in The Guildhall building, <br>adjacent to the Market. In January 2015, an exciting 2 year project began, funded by the Coastal <br> Communities Fund. The aim of the project was to regenerate the Market to its former glory as the bustling <br>hub of community life.
+</p>
+<img src="assets/cardigan-market-interior.jpg" style="width: 660px;">
+<p>Text and Images were Gathered from old Guildhall Website</p>
+</div>
+    <div class="map-text">
+        <a href="sitemap.html">Site Map</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="contactus.html">Contact Details and Socials</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="about.html">About Us</a>
+    </div>
+    
+    <src="script.js"></script> 
+  
+
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

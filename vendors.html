@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+<a href="logofullscreen.html"><img src="assets/Logo.png" style="width: 130px;"></a> 
+    <div class="lefta">       
+<a href="index.html">Home</a>
+<a class="active" href="vendors.html">Vendors</a>
+<a href="media.html">Animation/Application</a>
+<a href="about.html">About Us</a>
+<a href="contactus.html">Contact Us</a>
+<a href="allsocials.html">Socials</a>
+   </div> 
+</div>
+    <!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE -->
+<div class="Text">
+    <h2>How To Become a Vendor:</h2>
+    <p11>If you are interested in having a shop at the market, a shop application form can be <a href="https://web.archive.org/web/20240612185537/https://www.cardigan-guildhall-market.co.uk/wordpress/wp-content/uploads/Stall-Enquiry-form-Cardigan-Guildhall-Market.pdf">downloaded as a PDF</a> and emailed to us. (Old Link Using Wayback Machine)</p11>
+</div>
+
+    <div class="vendorphotoname">
+<h1 style="font-size: xx-large; color: #111111;">Photos Of The Different Vendors</h1>
+</div>
+<div class="Gallery">
+    <div class="contentvendor">
+        <h2 id="Success Stories" style="color: #111111;">Success Stories</h2>
+        <h1 id="browniehead">Cardigan Bay Brownies</h1>
+        <img class="Brownie" src="assets/Screenshot 2026-04-22 102522.png"> 
+        <h3 id="no28">Fine Things no.28</h3>
+        <img class="FineThings" src="assets/Screenshot 2026-04-22 105528.png">
+        <img class="MainImages" id="slider" src="assets/AmazeMe3d.jpeg" alt="">
+<p id="caption">Amaze Me 3D. <br> <br> We sell Items Such As: <br> <br> • Novelty Items and Gifts <br> • Models and Figurines <br> • And Other 3D Printed Designs <br> <br> <a href="https://www.facebook.com/groups/1301291670543597/" target="_blank">Link</a></p>
+</div>
+
+  <div class="Buttons">
+    <button onclick="prevImage()"><</button>
+    <button onclick="nextImage()">></button>
+ </div>
+ 
+</div>
+</body>
+</html>
+
+
+
+<div class="content1">
+</div>
+    <div class="map-text">
+        <a href="sitemap.html">Site Map</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="contactus.html">Contact Details and Socials</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="about.html">About Us</a>
+    </div>
+   <script src="script.js"></script> 
+  
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

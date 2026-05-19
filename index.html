@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="overflow: hidden; background-color: rgb(163, 163, 163);">
+    <div class="topnav">
+<a href="logofullscreen.html"><img src="assets/Logo.png" style="width: 130px;"></a> 
+    <div class="lefta">       
+<a class="active" href="index.html">Home</a>
+<a href="vendors.html">Vendors</a>
+<a href="media.html">Animation/Application</a>
+<a href="about.html">About Us</a>
+<a href="contactus.html">Contact Us</a>
+<a href="allsocials.html">Socials</a>
+   </div> 
+</div>
+
+    <!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE -->
+   <div class="HomeText"> <p>WELCOME TO THE CARDIGAN GUILDHALL MARKET</p> Website Is Made For 1920 x 1080 Screen Resolution and Looks Off When On A Screen Of Different Size</div>
+
+<div class="fade-container">
+        <img src="assets/Screenshot 2026-05-06 090838.png" class="fade-img">
+        <img src="assets/cardigan-market-interior.jpg" class="fade-img">
+        <img src="assets/caption.jpg" class="fade-img">
+        <img src="assets/8d461f3b-1699-4e14-86cb-fa0122c44ff2.jpg" class="fade-img">
+        <img src="assets/guildhall.jpg" class="fade-img">
+</div>
+
+
+
+
+    <div class="map-text">
+        <a href="sitemap.html">Site Map</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="contactus.html">Contact Details and Socials</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="about.html">About Us</a>
+    </div>
+
+   <script src="script.js"></script>  
+
+
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
+

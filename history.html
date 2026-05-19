@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <div class="topnav">
+<a href="logofullscreen.html"><img src="assets/Logo.png" style="width: 130px;"></a> 
+    <div class="lefta">       
+<a href="index.html">Home</a>
+<a href="vendors.html">Vendors</a>
+<a href="media.html">Animation/Application</a>
+<a class="active"  href="about.html">About Us</a>
+<a href="contactus.html">Contact Us</a>
+<a href="allsocials.html">Socials</a>
+   </div> 
+</div>
+    <!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE --><div class="VertNavAbout">
+<a href="about.html">About Us</a>
+<a class="active" href="History.html">History</a>
+<a href="assets/Stall-Enquiry-form-Cardigan-Guildhall-Market.pdf" download>Download Vendor Opening PDF</a>
+</div>
+
+<div class="content-container">
+     <div class="center-text">
+        <h2>History of the Guildhall</h2>
+        <p>
+            In the early 1800s, markets in Cardigan were held in the open streets. Food such as meat and milk was sold outside without much protection from dirt, animals, or insects. Animals were sometimes killed where they were sold, and waste was left in the streets. As the town grew, this caused serious problems with cleanliness and health. 
+            <br> <br>
+            In 1822, a local baker and publican named William Phillips built a small market hall and slaughterhouse in Mwldan. He rented it to the town for a small yearly fee. However, the building was soon too small, and traders returned to selling goods in the streets. To improve conditions, the Town Council introduced rules in 1836 to keep the market cleaner, with fines for people who did not follow them.
+            <br> <br>
+            By the 1850s, Cardigan had become an important market town, but it still did not have a large enough market building. In 1855, the Council asked for legal advice and decided that a new market and public building could be created through an Act of Parliament. Although some people objected, the plan went ahead after compensation was paid.
+            <br> <br>
+            A new site was chosen at Free School Bank, near the old North Gate. Plans were approved in 1856, and permission was officially granted in 1857. The new buildings, including the Market Hall and Guildhall, opened in July 1860. A new slaughterhouse was also built further away from the town centre to improve hygiene.
+            <br> <br>
+            The market building had two main levels. The upper floor was used to sell meat, poultry, butter, and cheese. The lower floor was used for selling live animals, which were then taken to the slaughterhouse nearby.
+            <br> <br>
+            The building is important because of its design. It was one of the first public buildings in Britain built in the “modern Gothic” style supported by John Ruskin. It also includes some Middle Eastern design features, especially in the arches. The lower level has a darker, more medieval look with stone columns and arches, while the upper level is lighter, with large windows and a glass roof.
+            <br> <br>
+            Some changes were made to the building in 1969, including adding a central staircase. However, it has continued to be used as a market since it first opened in 1860.
+            <br> <br>
+            In more recent years, the market has continued to play an important role in the town, although the way it is used has changed. Traditional livestock trading has declined, and the building is now used more for local produce, crafts, and small businesses. Efforts have been made to preserve the historic structure while adapting it for modern use. Today, the market remains a key part of Cardigan’s community, attracting both local residents and visitors, and helping to support the local economy while maintaining its historical importance.
+    </div>
+
+    <div class="right-images">
+        <img src="assets/Early-street-scene-including-the-Guildhall-Cardigan-650x414.jpg">
+        <img src="assets/Lower-Market-level-before-installation-of-market-pitches-650x461.jpg">
+        <img src="assets/Upper-Market-late-19th-century-2-650x406.jpg">
+        <img style="height: 190px;" src="assets/cardigan-guildhall-market-historic-layout.jpg">
+    </div>
+
+</div>
+</div>
+
+
+
+    <div class="map-text">
+        <a href="sitemap.html">Site Map</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="contactus.html">Contact Details and Socials</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="about.html">About Us</a>
+    </div>
+
+ 
+
+   <script src="script.js"></script> 
+  
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+</html>

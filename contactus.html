@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Where To Find Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+<a href="logofullscreen.html"><img src="assets/Logo.png" style="width: 130px;"></a> 
+    <div class="lefta">       
+<a href="index.html">Home</a>
+<a href="vendors.html">Vendors</a>
+<a href="media.html">Animation/Application</a>
+<a href="about.html">About Us</a>
+<a class="active"  href="contactus.html">Contact Us</a>
+<a href="allsocials.html">Socials</a>
+   </div> 
+</div>
+    <!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE -->
+     <div class="ContactNav">
+    <a class="active" href="contactus.html">Contact Us</a>
+    <a href="parking.html">Parking</a>
+</div>
+
+<div class="ContactUsMain">
+<h1>Contact Us - </h1>
+<p>Cardigan Guildhall Market<br>
+Menter Aberteifi<br>
+The Guildhall,<br>
+Cardigan,<br>
+Ceredigion,<br>
+SA43 1JL</p>
+<p>&nbsp;</p>
+<p>Number:&nbsp; &nbsp;01239 615554</p>
+Email:&nbsp; &nbsp; <a href="mailto:jbl@menter-aberteifi.com">jbl@menter-aberteifi.com</a>
+</div>
+
+<div class="socialmedias">
+    <a href="https://www.facebook.com/CardiganGuildhallMarket/"><img src="assets/facebook.png"></a>
+    <a href="https://x.com/GuildhallM"><img src="assets/vecteezy_twitter-logo-png-twitter-icon-transparent-free-png_18930745.png"></a>
+    <a href="https://www.tripadvisor.co.uk/Attraction_Review-g316011-d15685342-Reviews-Cardigan_Guildhall_Market-Cardigan_Ceredigion_Wales.html"><img src="assets/tripadvisor-logo-stacked.png"></a>
+</div>
+
+<div class="maplocation">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4266.417537405803!2d-4.66287736212975!3d52.084117776969016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486f2fccacca98d3%3A0x4c9034dfbe00afcc!2sCardigan%20Guildhall%20Market!5e1!3m2!1sen!2suk!4v1778578792315!5m2!1sen!2suk" width="900" height="740" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+    <div class="map-text">
+        <a href="sitemap.html">Site Map</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="contactus.html">Contact Details and Socials</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a href="about.html">About Us</a>
+    </div>
+   <script src="script.js"></script> 
+  
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+</html>
